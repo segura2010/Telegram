@@ -184,7 +184,8 @@
         {
             conversation = [TGDatabaseInstance() loadChannels:@[@(conversationId)]][@(conversationId)];
             if (conversation != nil) {
-                if (conversation.hasExplicitContent) {
+                if (false && conversation.hasExplicitContent) {
+                    // Explicit content block!
                     if (!navigationController)
                         [TGAppDelegateInstance.rootController.dialogListController selectConversationWithId:0];
                     

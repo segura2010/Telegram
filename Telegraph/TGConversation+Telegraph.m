@@ -148,7 +148,7 @@
             
             self.isVerified = channel.flags & (1 << 7);
             self.isChannelGroup = channel.flags & (1 << 8);
-            self.everybodyCanAddMembers = channel.flags & (1 << 10);
+            self.everybodyCanAddMembers = true; //channel.flags & (1 << 10);
             self.signaturesEnabled = channel.flags & (1 << 11);
             self.isMin = channel.flags & (1 << 12);
             self.canNotSetUsername = (channel.flags & (1 << 6)) == 0;
@@ -158,6 +158,12 @@
             self.postAsChannel = self.channelRole == TGChannelRoleCreator || self.channelRole == TGChannelRolePublisher;
             
             self.hasExplicitContent = channel.flags & (1 << 9);
+            if(self.hasExplicitContent)
+            {
+                self.chatTitle = [@"[+18] " stringByAppendingString:self.chatTitle];
+                self.hasExplicitContent = false;
+            }
+            
             self.restrictionReason = channel.restriction_reason;
             
             self.kind = (self.leftChat || self.kickedFromChat) ? TGConversationKindTemporaryChannel : TGConversationKindPersistentChannel;

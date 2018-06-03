@@ -338,6 +338,9 @@ typedef std::map<int, std::pair<TGUser *, int > >::iterator UserDataToDispatchIt
             SETUP_API_ID(apiId)
             SETUP_API_HASH(apiHash)
             
+            NSLog(@"APIID: %d", apiId);
+            NSLog(@"APIHASH: %@", apiHash);
+            
             assert(apiId != 0);
             assert(apiHash.length != 0);
             
