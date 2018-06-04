@@ -61,6 +61,8 @@
 {
     if ([updateDesc isKindOfClass:[TLhelp_AppUpdate$help_appUpdate class]])
     {
+        TGLog(@"New update available");
+        /* Remove Update AlertView (it is annoying)
         dispatch_async(dispatch_get_main_queue(), ^
         {
             TLhelp_AppUpdate$help_appUpdate *concreteUpdate = (TLhelp_AppUpdate$help_appUpdate *)updateDesc;
@@ -69,6 +71,7 @@
             [TGUpdateInterface instance].updateUrl = concreteUpdate.url;
             [alertView show];
         });
+         */
     }
     
     [ActionStageInstance() actionCompleted:self.path result:nil];

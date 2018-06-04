@@ -146,7 +146,7 @@
 
 - (UIColor *)dialogChecksColor
 {
-    return UIColorRGB(0x0dc33b);
+    return UIColorRGB(0x007ee5);
 }
 
 - (UIColor *)dialogVerifiedBackgroundColor
@@ -246,17 +246,17 @@
 
 //- (UIColor *)chatOutgoingBubbleBorderColor
 //{
-//    
+//
 //}
 //
 //- (UIColor *)chatOutgoingHighlightedBubbleColor
 //{
-//    
+//
 //}
 //
 //- (UIColor *)chatOutgoingHighlightedBubbleBorderColor
 //{
-//    
+//
 //}
 
 - (UIColor *)chatOutgoingTextColor
@@ -281,12 +281,12 @@
 
 - (UIColor *)chatChecksColor
 {
-    return UIColorRGB(0x23ca0a);
+    return UIColorRGB(0x007ee5);
 }
 
 - (UIColor *)chatChecksMediaColor
 {
-    return [UIColor whiteColor];
+    return UIColorRGB(0x007ee5);
 }
 
 - (UIColor *)chatServiceBackgroundColor
